@@ -1,11 +1,18 @@
 # <img src="./release/logo.png" width="40" height="40"> MinatKu
 **Sistem Personalisasi & Pengembangan Minat Mahasiswa**
 
-![App Mockup](./release/mockup.png)
+## 📱 App Preview
+Berikut adalah tampilan antarmuka aplikasi MinatKu:
+
+<p align="center">
+  <img src="./release/mockup_splash.png" width="250" />
+  <img src="./release/mockup_dashboard.png" width="250" /> 
+  <img src="./release/mockup_form.png" width="250" />
+</p>
 
 MinatKu adalah aplikasi Android modern yang dirancang untuk membantu mahasiswa mengenali, mengelola, dan mengembangkan minat serta hobi mereka. Dengan pendekatan *data-driven*, aplikasi ini memberikan rekomendasi aktivitas dan jalur pengembangan yang dipersonalisasi untuk setiap individu.
 
-## 🚀 Fitur Utama
+## ✨ Fitur Utama
 - **🎨 Modern & Clean UI**: Antarmuka berbasis *Material Design* yang elegan dan responsif.
 - **📊 Insight Global**: Analisis real-time tren minat di lingkungan mahasiswa.
 - **🎯 Recommendation Engine**: Saran aktivitas (Workshop, Komunitas, Lomba) yang relevan dengan minat Anda.
