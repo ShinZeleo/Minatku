@@ -6,7 +6,6 @@ Berikut adalah tampilan antarmuka aplikasi MinatKu:
 
 <p align="center">
   <img src="./release/mockup_splash.png" width="250" />
-  <img src="./release/mockup_dashboard.png" width="250" /> 
   <img src="./release/mockup_form.png" width="250" />
 </p>
 
