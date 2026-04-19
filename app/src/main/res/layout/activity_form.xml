@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_form_header"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:paddingTop="40dp"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FORMULIR"
+                android:textSize="12sp"
+                android:textColor="#C7D2FE"
+                android:letterSpacing="0.15"
+                android:layout_marginBottom="6dp" />
+
+            <TextView
+                android:id="@+id/tvFormTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Pendataan Profil"
+                android:textSize="26sp"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lengkapi data diri untuk mendapat rekomendasi yang tepat"
+                android:textSize="13sp"
+                android:textColor="#E0E7FF" />
+
+        </LinearLayout>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="6dp"
+            app:strokeWidth="0dp"
+            app:cardBackgroundColor="@color/white"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="22dp"
+                        android:background="@color/primary"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Data Pribadi"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary" />
+                </LinearLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nama Lengkap"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Usia (Tahun)"
+                    style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                    android:layout_marginBottom="20dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUmur"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <TextView
+                    android:id="@+id/tvLabelGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+                <RadioGroup
+                    android:id="@+id/rgGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="24dp">
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/rbLaki"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="14sp"
+                        android:layout_marginEnd="24dp"
+                        android:text="Laki-laki" />
+                    <com.google.android.material.radiobutton.MaterialRadioButton
+                        android:id="@+id/rbPerempuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/textPrimary"
+                        android:textSize="14sp"
+                        android:text="Perempuan" />
+                </RadioGroup>
+
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginBottom="24dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="22dp"
+                        android:background="@color/accent"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Informasi Akademik"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary" />
+                </LinearLayout>
+
+
+                <TextView
+                    android:id="@+id/tvLabelJurusan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jurusan"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_edittext"
+                    android:layout_marginBottom="16dp">
+                    <Spinner
+                        android:id="@+id/spinnerJurusan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="12dp"
+                        android:background="@null" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/tvLabelMinat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bidang Minat"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_edittext"
+                    android:layout_marginBottom="16dp">
+                    <Spinner
+                        android:id="@+id/spinnerMinat"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="12dp"
+                        android:background="@null" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/tvLabelKategori"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Semester"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_edittext"
+                    android:layout_marginBottom="16dp">
+                    <Spinner
+                        android:id="@+id/spinnerKategori"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="12dp"
+                        android:background="@null" />
+                </FrameLayout>
+
+
+                <TextView
+                    android:id="@+id/tvLabelTujuan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tujuan Pengembangan"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="6dp" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_edittext"
+                    android:layout_marginBottom="28dp">
+                    <Spinner
+                        android:id="@+id/spinnerTujuan"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingHorizontal="12dp"
+                        android:background="@null" />
+                </FrameLayout>
+
+
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:background="@color/divider" android:layout_marginBottom="24dp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="22dp"
+                        android:background="@color/secondary"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Hobi &amp; Aktivitas"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textPrimary" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvLabelHobi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pilih hobi yang sesuai"
+                    android:textColor="@color/textSecondary"
+                    android:textSize="12sp"
+                    android:layout_marginBottom="12dp" />
+
+                <GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:columnCount="2"
+                    android:layout_marginBottom="32dp">
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbMakan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Makan" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbTidur" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Tidur" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbGaming" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Gaming" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbMembaca" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Membaca" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbOlahraga" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Olahraga" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbCoding" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Coding" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbFotografi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Fotografi" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbMelukis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Melukis" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbMenulis" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Menulis" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbMemasak" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Memasak" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbMusik" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginEnd="16dp" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Musik" />
+                    <com.google.android.material.checkbox.MaterialCheckBox android:id="@+id/cbTraveling" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textColor="@color/textPrimary" android:textSize="14sp" android:text="Traveling" />
+                </GridLayout>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:text="Simpan Profil"
+                    android:textAllCaps="false"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="100dp"
+                    app:elevation="4dp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</ScrollView>

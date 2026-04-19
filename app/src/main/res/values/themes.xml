@@ -1,0 +1,29 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.CaseBased3" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/onPrimaryContainer</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorError">@color/errorRed</item>
+        <item name="colorOnError">@color/white</item>
+
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+
+        <item name="colorSurface">@color/card</item>
+        <item name="colorOnSurface">@color/textPrimary</item>
+        <item name="colorOnSurfaceVariant">@color/textSecondary</item>
+        <item name="colorOutline">@color/divider</item>
+
+        <!-- Status bar matches gradient -->
+        <item name="android:statusBarColor">@color/primaryDark</item>
+        <item name="android:navigationBarColor">@color/background</item>
+    </style>
+
+    <style name="Theme.CaseBased3" parent="Base.Theme.CaseBased3" />
+</resources>
