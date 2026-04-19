@@ -1,19 +1,30 @@
-# Minatku 🎓
-**Sistem Personalisasi dan Pengembangan Minat & Hobi Mahasiswa**
+# <img src="./release/logo.png" width="40" height="40"> MinatKu
+**Sistem Personalisasi & Pengembangan Minat Mahasiswa**
 
-Aplikasi Android modern yang dirancang untuk membantu mahasiswa mengelola profil, minat, dan hobi mereka, serta memberikan rekomendasi aktivitas pengembangan diri berdasarkan data tersebut.
+![App Mockup](./release/mockup.png)
 
-## ✨ Fitur Utama
-- **Modern UI**: Desain bersih dan profesional dengan Material Design.
-- **Personalized Summary**: Ringkasan profil otomatis yang natural.
-- **Recommendation Engine**: Saran kegiatan (Workshop, Komunitas, Lomba) berdasarkan minat.
-- **Development Path**: Jalur pengembangan langkah-demi-langkah per bidang minat.
-- **Insight Global**: Analisis statistik tren minat di antara mahasiswa.
+MinatKu adalah aplikasi Android modern yang dirancang untuk membantu mahasiswa mengenali, mengelola, dan mengembangkan minat serta hobi mereka. Dengan pendekatan *data-driven*, aplikasi ini memberikan rekomendasi aktivitas dan jalur pengembangan yang dipersonalisasi untuk setiap individu.
 
-## 🚀 Download APK
-Anda bisa mengunduh file APK aplikasi langsung melalui link di bawah ini:
+## 🚀 Fitur Utama
+- **🎨 Modern & Clean UI**: Antarmuka berbasis *Material Design* yang elegan dan responsif.
+- **📊 Insight Global**: Analisis real-time tren minat di lingkungan mahasiswa.
+- **🎯 Recommendation Engine**: Saran aktivitas (Workshop, Komunitas, Lomba) yang relevan dengan minat Anda.
+- **🚀 Development Path**: Panduan langkah-demi-langkah untuk mencapai potensi maksimal di bidang yang Anda pilih.
+- **📝 Intelligent Summary**: Ringkasan profil otomatis menggunakan bahasa natural yang profesional.
 
-👉 **[Download Minatku.apk](./release/Minatku.apk)**
+## 📥 Instalasi
+Anda dapat mengunduh aplikasi MinatKu secara langsung melalui tautan di bawah ini:
+
+| Sumber | Tautan Unduhan |
+| --- | --- |
+| **MediaFire (Latest)** | [Unduh Minatku.apk](https://www.mediafire.com/file/22362v5a91731oh/Minatku.apk/file) |
+| **GitHub Release** | [Minatku.apk](./release/Minatku.apk) |
+
+## 🛠️ Arsitektur Proyek
+Proyek ini dibangun dengan fokus pada modularitas dan kebersihan kode:
+- **DataLayer**: Centralized `DataRepository` untuk manajemen file I/O yang aman.
+- **ServiceLayer**: Mesin cerdas (`RecommendationEngine`, `InsightAnalyzer`, `DevelopmentPathEngine`) yang terpisah dari logika UI.
+- **Model-Centric**: Penggunaan `DataModel` yang konsisten di seluruh aplikasi.
 
 ---
-*Dikembangkan sebagai proyek Pemrograman Mobile.*
+*Dikembangkan oleh [ShinZeleo](https://github.com/ShinZeleo) sebagai proyek Pemrograman Mobile.*
