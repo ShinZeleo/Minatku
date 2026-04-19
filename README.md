@@ -23,7 +23,7 @@ Anda dapat mengunduh aplikasi MinatKu secara langsung melalui tautan di bawah in
 
 | Sumber | Tautan Unduhan |
 | --- | --- |
-| **MediaFire (Latest)** | [Unduh Minatku.apk](https://www.mediafire.com/file/22362v5a91731oh/Minatku.apk/file) |
+| **MediaFire (Latest)** | [Unduh Minatku.apk](https://www.mediafire.com/file/fpmd1gqba333cel/Minatku.apk/file) |
 | **GitHub Release** | [Minatku.apk](./release/Minatku.apk) |
 
 ## 🛠️ Arsitektur Proyek
