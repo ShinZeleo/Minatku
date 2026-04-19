@@ -241,7 +241,17 @@ public class DetailActivity extends AppCompatActivity {
         TextView b = new TextView(this);
         b.setText(label);
         b.setTextColor(Color.WHITE);
+        b.setTextSize(TypedValue.COMPLEX_UNIT_SP, 12);
+        b.setTypeface(null, Typeface.BOLD);
+        b.setPadding(dpToPx(12), dpToPx(4), dpToPx(12), dpToPx(4));
         b.setBackgroundResource(R.drawable.bg_step_badge);
+        
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                LinearLayout.LayoutParams.WRAP_CONTENT,
+                LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.bottomMargin = dpToPx(8);
+        b.setLayoutParams(lp);
+        
         card.addView(b);
 
         TextView c = new TextView(this);
