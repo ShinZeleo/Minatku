@@ -79,12 +79,12 @@ public class ListActivity extends AppCompatActivity {
 
     private void setupFilterSpinners() {
         String[] minatOptions = {"Semua", "Teknologi", "Seni", "Bisnis", "Sosial", "Kesehatan", "Sains"};
-        ArrayAdapter<String> minatAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, minatOptions);
+        ArrayAdapter<String> minatAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, minatOptions);
         minatAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFilterMinat.setAdapter(minatAdapter);
 
         String[] tujuanOptions = {"Semua", "Pengembangan Skill", "Persiapan Karir", "Sekadar Hobi", "Mencari Komunitas"};
-        ArrayAdapter<String> tujuanAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, tujuanOptions);
+        ArrayAdapter<String> tujuanAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, tujuanOptions);
         tujuanAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerFilterTujuan.setAdapter(tujuanAdapter);
 

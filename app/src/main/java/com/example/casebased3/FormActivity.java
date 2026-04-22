@@ -92,12 +92,12 @@ public class FormActivity extends AppCompatActivity {
 
     private void setupSpinners() {
         String[] kategoriList = {"Semester 1", "Semester 2", "Semester 3", "Semester 4", "Semester 5", "Semester 6", "Semester 7", "Semester 8"};
-        ArrayAdapter<String> katAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, kategoriList);
+        ArrayAdapter<String> katAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, kategoriList);
         katAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerKategori.setAdapter(katAdapter);
 
         String[] minatList = {"Teknologi", "Seni", "Bisnis", "Sosial", "Kesehatan", "Sains"};
-        ArrayAdapter<String> minatAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, minatList);
+        ArrayAdapter<String> minatAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, minatList);
         minatAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerMinat.setAdapter(minatAdapter);
 
@@ -107,12 +107,12 @@ public class FormActivity extends AppCompatActivity {
                 "Hubungan Internasional", "Teknik Sipil", "Arsitektur", "Farmasi", "Matematika", "Biologi",
                 "Fisika", "Kimia", "Teknik Mesin", "Teknik Industri", "Lainnya"
         };
-        ArrayAdapter<String> jurAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, jurusanList);
+        ArrayAdapter<String> jurAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, jurusanList);
         jurAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerJurusan.setAdapter(jurAdapter);
 
         String[] tujuanList = {"Pengembangan Skill", "Persiapan Karir", "Sekadar Hobi", "Mencari Komunitas"};
-        ArrayAdapter<String> tujuanAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, tujuanList);
+        ArrayAdapter<String> tujuanAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, tujuanList);
         tujuanAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerTujuan.setAdapter(tujuanAdapter);
     }

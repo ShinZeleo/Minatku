@@ -123,6 +123,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Cari mahasiswa..."
+            app:hintTextColor="@color/primary"
+            app:placeholderTextColor="@color/textSecondary"
             style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
             app:startIconDrawable="@drawable/ic_search"
             app:boxCornerRadiusTopStart="16dp"
@@ -135,6 +137,8 @@
                 android:id="@+id/etSearch"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/textPrimary"
+                android:textColorHint="@color/textSecondary"
                 android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 

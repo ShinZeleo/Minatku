@@ -14,6 +14,8 @@
 
         <item name="android:colorBackground">@color/background</item>
         <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
 
         <item name="colorSurface">@color/card</item>
         <item name="colorOnSurface">@color/textPrimary</item>

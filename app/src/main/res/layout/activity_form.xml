@@ -97,6 +97,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Nama Lengkap"
+                    app:hintTextColor="@color/primary"
+                    app:placeholderTextColor="@color/textSecondary"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_marginBottom="16dp">
 
@@ -104,6 +106,8 @@
                         android:id="@+id/etNama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textPrimary"
+                        android:textColorHint="@color/textSecondary"
                         android:inputType="textPersonName" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -112,6 +116,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="Usia (Tahun)"
+                    app:hintTextColor="@color/primary"
+                    app:placeholderTextColor="@color/textSecondary"
                     style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
                     android:layout_marginBottom="20dp">
 
@@ -119,6 +125,8 @@
                         android:id="@+id/etUmur"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/textPrimary"
+                        android:textColorHint="@color/textSecondary"
                         android:inputType="number" />
                 </com.google.android.material.textfield.TextInputLayout>
 
