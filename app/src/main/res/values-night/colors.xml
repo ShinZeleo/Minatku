@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base Colors: Indigo (brighter for dark mode) -->
+    <color name="primary">#818CF8</color>
+    <color name="primaryDark">#6366F1</color>
+    <color name="primaryContainer">#312E81</color>
+    <color name="onPrimaryContainer">#C7D2FE</color>
+    
+    <!-- Secondary & Accent: Teal -->
+    <color name="secondary">#2DD4BF</color>
+    <color name="accent">#14B8A6</color>
+    
+    <!-- Background & Surface: Slate Dark -->
+    <color name="background">#0F172A</color>
+    <color name="white">#1E293B</color>
+    <color name="card">#1E293B</color>
+    <color name="divider">#334155</color>
+    <color name="outline">#475569</color>
+
+    <!-- Text Colors -->
+    <color name="textPrimary">#F1F5F9</color>
+    <color name="textSecondary">#94A3B8</color>
+
+    <!-- Error/Destructive -->
+    <color name="errorRed">#F87171</color>
+    <color name="danger">#F87171</color>
+
+    <!-- Utilities -->
+    <color name="ripple_color">#1A818CF8</color>
+</resources>

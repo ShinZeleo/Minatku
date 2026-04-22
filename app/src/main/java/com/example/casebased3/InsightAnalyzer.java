@@ -59,6 +59,30 @@ public class InsightAnalyzer {
         return "Total: " + list.size() + "  |  Laki-laki: " + l + "  |  Perempuan: " + p;
     }
 
+    /** Returns distribution of minat for Pie Chart */
+    public static Map<String, Integer> getMinatDistribution(List<DataModel> list) {
+        Map<String, Integer> map = new LinkedHashMap<>();
+        if (list == null) return map;
+        for (DataModel dm : list) {
+            if (isValidField(dm.getMinat())) {
+                map.put(dm.getMinat(), map.getOrDefault(dm.getMinat(), 0) + 1);
+            }
+        }
+        return map;
+    }
+
+    /** Returns distribution of semester/kategori for Bar Chart */
+    public static Map<String, Integer> getSemesterDistribution(List<DataModel> list) {
+        Map<String, Integer> map = new LinkedHashMap<>();
+        if (list == null) return map;
+        for (DataModel dm : list) {
+            if (isValidField(dm.getKategori())) {
+                map.put(dm.getKategori(), map.getOrDefault(dm.getKategori(), 0) + 1);
+            }
+        }
+        return map;
+    }
+
     private static boolean isValidField(String f) { return f != null && !f.trim().isEmpty() && !f.equals("-"); }
 
     private static String getDominant(Map<String, Integer> map) {
