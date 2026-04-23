@@ -36,14 +36,23 @@
         android:paddingHorizontal="32dp">
 
 
-        <com.airbnb.lottie.LottieAnimationView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="20dp"
-            app:lottie_rawRes="@raw/splash_animation"
-            app:lottie_autoPlay="true"
-            app:lottie_loop="true" />
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="88dp"
+            android:layout_height="88dp"
+            app:cardCornerRadius="44dp"
+            app:cardElevation="0dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="#4DFFFFFF"
+            app:cardBackgroundColor="#26FFFFFF"
+            android:layout_marginBottom="24dp">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_explore"
+                app:tint="#FFFFFF" />
+        </com.google.android.material.card.MaterialCardView>
 
         <TextView
             android:layout_width="wrap_content"
