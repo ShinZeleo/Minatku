@@ -15,6 +15,7 @@ import android.widget.BaseAdapter;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,6 +23,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
+import androidx.core.widget.NestedScrollView;
 
 import com.github.mikephil.charting.charts.HorizontalBarChart;
 import com.github.mikephil.charting.charts.PieChart;
@@ -37,6 +39,7 @@ import com.github.mikephil.charting.formatter.PercentFormatter;
 import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.chip.Chip;
 import com.google.android.material.chip.ChipGroup;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -59,6 +62,9 @@ public class ListActivity extends AppCompatActivity {
     private MaterialCardView cardInsightGlobal;
     private ImageView ivExpandCharts;
     private LinearLayout containerCharts;
+    private NestedScrollView mainScrollView;
+    private LinearLayout layoutFilters;
+    private FloatingActionButton fabScrollTop;
 
     private DataRepository repository;
     private List<DataModel> allData;
@@ -96,12 +102,27 @@ public class ListActivity extends AppCompatActivity {
         cardInsightGlobal = findViewById(R.id.cardInsightGlobal);
         ivExpandCharts = findViewById(R.id.ivExpandCharts);
         containerCharts = findViewById(R.id.containerCharts);
+        mainScrollView = findViewById(R.id.mainScrollView);
+        layoutFilters = findViewById(R.id.layoutFilters);
+        fabScrollTop = findViewById(R.id.fabScrollTop);
 
         cardInsightGlobal.setOnClickListener(v -> {
             boolean isVisible = containerCharts.getVisibility() == View.VISIBLE;
             containerCharts.setVisibility(isVisible ? View.GONE : View.VISIBLE);
             ivExpandCharts.animate().rotation(isVisible ? 0 : 180).setDuration(200).start();
         });
+
+        mainScrollView.setOnScrollChangeListener((NestedScrollView.OnScrollChangeListener) (v, scrollX, scrollY, oldScrollX, oldScrollY) -> {
+            int[] location = new int[2];
+            layoutFilters.getLocationOnScreen(location);
+            if (location[1] + layoutFilters.getHeight() < 0) {
+                if (fabScrollTop.getVisibility() != View.VISIBLE) fabScrollTop.show();
+            } else {
+                if (fabScrollTop.getVisibility() == View.VISIBLE) fabScrollTop.hide();
+            }
+        });
+
+        fabScrollTop.setOnClickListener(v -> mainScrollView.smoothScrollTo(0, 0));
 
         tvEmptyState.setText("Belum ada data mahasiswa");
 
@@ -202,8 +223,31 @@ public class ListActivity extends AppCompatActivity {
             
             if (matchSearch && matchMinat && matchTujuan) filteredData.add(dm);
         }
-        if (adapter != null) adapter.notifyDataSetChanged();
+        if (adapter != null) {
+            adapter.notifyDataSetChanged();
+            setListViewHeightBasedOnChildren(listViewData);
+        }
         updateUIBasedOnDataLength();
+    }
+
+    private void setListViewHeightBasedOnChildren(ListView listView) {
+        ListAdapter listAdapter = listView.getAdapter();
+        if (listAdapter == null) return;
+
+        int totalHeight = 0;
+        for (int i = 0; i < listAdapter.getCount(); i++) {
+            View listItem = listAdapter.getView(i, null, listView);
+            listItem.measure(
+                View.MeasureSpec.makeMeasureSpec(listView.getWidth(), View.MeasureSpec.EXACTLY),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED)
+            );
+            totalHeight += listItem.getMeasuredHeight();
+        }
+
+        ViewGroup.LayoutParams params = listView.getLayoutParams();
+        params.height = totalHeight + (listView.getDividerHeight() * (listAdapter.getCount() - 1));
+        listView.setLayoutParams(params);
+        listView.requestLayout();
     }
 
     private void updateUIBasedOnDataLength() {

@@ -1,337 +1,344 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:clipChildren="false"
-    android:clipToPadding="false"
     android:background="@color/background">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:background="@drawable/bg_form_header"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:paddingTop="36dp"
-        android:paddingBottom="28dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="OVERVIEW"
-            android:textSize="11sp"
-            android:textColor="#C7D2FE"
-            android:letterSpacing="0.15"
-            android:layout_marginBottom="4dp" />
-
-        <TextView
-            android:id="@+id/tvListTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Dashboard Mahasiswa"
-            android:textSize="24sp"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/mainScrollView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:fillViewport="true"
-        android:clipChildren="false"
-        android:clipToPadding="false">
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:padding="16dp">
-
-
-            <!-- Insight Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardInsightGlobal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="4dp"
-                app:strokeWidth="0dp"
-                app:cardBackgroundColor="@color/card"
-                android:layout_marginTop="-28dp"
-                android:layout_marginBottom="16dp"
-                android:clickable="true"
-                android:focusable="true">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center_vertical"
-                        android:layout_marginBottom="10dp">
-
-                        <View
-                            android:layout_width="4dp"
-                            android:layout_height="20dp"
-                            android:background="@color/primary"
-                            android:layout_marginEnd="10dp" />
-
-                        <TextView
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:text="Insight Global"
-                            app:drawableStartCompat="@drawable/ic_insight"
-                            android:drawablePadding="8dp"
-                            android:textSize="15sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/textPrimary" />
-
-                        <ImageView
-                            android:id="@+id/ivExpandCharts"
-                            android:layout_width="24dp"
-                            android:layout_height="24dp"
-                            android:src="@drawable/ic_expand_more" />
-                    </LinearLayout>
-
-
-                    <TextView
-                        android:id="@+id/tvInsight"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="13sp"
-                        android:textColor="@color/textSecondary"
-                        android:lineSpacingExtra="4dp" />
-
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:layout_marginTop="12dp"
-                        android:background="@drawable/bg_section_indigo"
-                        android:padding="12dp">
-
-                        <TextView
-                            android:id="@+id/tvStatistik"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:textSize="12sp"
-                            android:textColor="@color/primary"
-                            android:textStyle="bold" />
-                    </LinearLayout>
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/containerCharts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="gone">
+                android:background="@drawable/bg_form_header"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:paddingTop="36dp"
+                android:paddingBottom="28dp">
 
-            <!-- Pie Chart Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardPieChart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="4dp"
-                app:strokeWidth="0dp"
-                app:cardBackgroundColor="@color/card"
-                android:layout_marginBottom="16dp"
-                android:visibility="gone">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OVERVIEW"
+                    android:textSize="11sp"
+                    android:textColor="#C7D2FE"
+                    android:letterSpacing="0.15"
+                    android:layout_marginBottom="4dp" />
 
-                <LinearLayout
+                <TextView
+                    android:id="@+id/tvListTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
+                    android:text="Dashboard Mahasiswa"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </LinearLayout>
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="📊 Distribusi Minat"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/textPrimary"
-                        android:layout_marginBottom="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-                    <com.github.mikephil.charting.charts.PieChart
-                        android:id="@+id/pieChart"
+                <!-- Insight Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardInsightGlobal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp"
+                    app:strokeWidth="0dp"
+                    app:cardBackgroundColor="@color/card"
+                    android:layout_marginTop="-28dp"
+                    android:layout_marginBottom="16dp"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="220dp" />
-                </LinearLayout>
-            </com.google.android.material.card.MaterialCardView>
-
-
-            <!-- Bar Chart Card -->
-            <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardBarChart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp"
-                app:cardElevation="4dp"
-                app:strokeWidth="0dp"
-                app:cardBackgroundColor="@color/card"
-                android:layout_marginBottom="16dp"
-                android:visibility="gone">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="20dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="📈 Statistik Semester"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:textColor="@color/textPrimary"
-                        android:layout_marginBottom="12dp" />
+                        android:orientation="vertical"
+                        android:padding="20dp">
 
-                        <com.github.mikephil.charting.charts.HorizontalBarChart
-                            android:id="@+id/barChart"
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="200dp" />
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="10dp">
+
+                            <View
+                                android:layout_width="4dp"
+                                android:layout_height="20dp"
+                                android:background="@color/primary"
+                                android:layout_marginEnd="10dp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="Insight Global"
+                                app:drawableStartCompat="@drawable/ic_insight"
+                                android:drawablePadding="8dp"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textPrimary" />
+
+                            <ImageView
+                                android:id="@+id/ivExpandCharts"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:src="@drawable/ic_expand_more" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvInsight"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="13sp"
+                            android:textColor="@color/textSecondary"
+                            android:lineSpacingExtra="4dp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp"
+                            android:background="@drawable/bg_section_indigo"
+                            android:padding="12dp">
+
+                            <TextView
+                                android:id="@+id/tvStatistik"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="12sp"
+                                android:textColor="@color/primary"
+                                android:textStyle="bold" />
+                        </LinearLayout>
                     </LinearLayout>
                 </com.google.android.material.card.MaterialCardView>
 
-            </LinearLayout>
-
-
-            <!-- Search -->
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Cari mahasiswa..."
-                app:hintTextColor="@color/primary"
-                app:placeholderTextColor="@color/textSecondary"
-                style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-                app:startIconDrawable="@drawable/ic_search"
-                app:boxCornerRadiusTopStart="16dp"
-                app:boxCornerRadiusTopEnd="16dp"
-                app:boxCornerRadiusBottomStart="16dp"
-                app:boxCornerRadiusBottomEnd="16dp"
-                android:layout_marginBottom="12dp">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etSearch"
+                <LinearLayout
+                    android:id="@+id/containerCharts"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/textPrimary"
-                    android:textColorHint="@color/textSecondary"
-                    android:inputType="textPersonName" />
-            </com.google.android.material.textfield.TextInputLayout>
+                    android:orientation="vertical"
+                    android:visibility="gone">
 
+                    <!-- Pie Chart Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardPieChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:strokeWidth="0dp"
+                        app:cardBackgroundColor="@color/card"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone">
 
-            <!-- Filter Chips: Minat -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Filter Minat"
-                android:textSize="12sp"
-                android:textColor="@color/textSecondary"
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none"
-                android:layout_marginBottom="10dp">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📊 Distribusi Minat"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textPrimary"
+                                android:layout_marginBottom="12dp" />
 
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/chipGroupMinat"
-                    android:layout_width="wrap_content"
+                            <com.github.mikephil.charting.charts.PieChart
+                                android:id="@+id/pieChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <!-- Bar Chart Card -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardBarChart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="4dp"
+                        app:strokeWidth="0dp"
+                        app:cardBackgroundColor="@color/card"
+                        android:layout_marginBottom="16dp"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="20dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="📈 Statistik Semester"
+                                android:textSize="15sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/textPrimary"
+                                android:layout_marginBottom="12dp" />
+
+                            <com.github.mikephil.charting.charts.HorizontalBarChart
+                                android:id="@+id/barChart"
+                                android:layout_width="match_parent"
+                                android:layout_height="200dp" />
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+
+                <!-- Search & Filters Container -->
+                <LinearLayout
+                    android:id="@+id/layoutFilters"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:singleSelection="true"
-                    app:selectionRequired="true" />
-            </HorizontalScrollView>
+                    android:orientation="vertical">
 
+                    <!-- Search -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Cari mahasiswa..."
+                        app:hintTextColor="@color/primary"
+                        app:placeholderTextColor="@color/textSecondary"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+                        app:startIconDrawable="@drawable/ic_search"
+                        app:boxCornerRadiusTopStart="16dp"
+                        app:boxCornerRadiusTopEnd="16dp"
+                        app:boxCornerRadiusBottomStart="16dp"
+                        app:boxCornerRadiusBottomEnd="16dp"
+                        android:layout_marginBottom="12dp">
 
-            <!-- Filter Chips: Tujuan -->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Filter Tujuan"
-                android:textSize="12sp"
-                android:textColor="@color/textSecondary"
-                android:textStyle="bold"
-                android:layout_marginBottom="6dp" />
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etSearch"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textPrimary"
+                            android:textColorHint="@color/textSecondary"
+                            android:inputType="textPersonName" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
-            <HorizontalScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:scrollbars="none"
-                android:layout_marginBottom="16dp">
+                    <!-- Filter Chips: Minat -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Filter Minat"
+                        android:textSize="12sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
 
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/chipGroupTujuan"
-                    android:layout_width="wrap_content"
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:layout_marginBottom="10dp">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupMinat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            app:selectionRequired="true" />
+                    </HorizontalScrollView>
+
+                    <!-- Filter Chips: Tujuan -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Filter Tujuan"
+                        android:textSize="12sp"
+                        android:textColor="@color/textSecondary"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="6dp" />
+
+                    <HorizontalScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:scrollbars="none"
+                        android:layout_marginBottom="16dp">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupTujuan"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:singleSelection="true"
+                            app:selectionRequired="true" />
+                    </HorizontalScrollView>
+                </LinearLayout>
+
+                <!-- Empty State with Lottie -->
+                <LinearLayout
+                    android:id="@+id/layoutEmptyState"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:singleSelection="true"
-                    app:selectionRequired="true" />
-            </HorizontalScrollView>
-
-
-            <!-- Empty State with Lottie -->
-            <LinearLayout
-                android:id="@+id/layoutEmptyState"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingTop="32dp"
-                android:paddingBottom="32dp"
-                android:visibility="gone">
-
-                <com.airbnb.lottie.LottieAnimationView
-                    android:id="@+id/lottieEmpty"
-                    android:layout_width="200dp"
-                    android:layout_height="150dp"
-                    app:lottie_rawRes="@raw/empty_state"
-                    app:lottie_autoPlay="true"
-                    app:lottie_loop="true" />
-
-                <TextView
-                    android:id="@+id/tvEmptyState"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Belum ada data mahasiswa"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/textSecondary"
+                    android:orientation="vertical"
                     android:gravity="center"
-                    android:layout_marginTop="12dp" />
+                    android:paddingTop="32dp"
+                    android:paddingBottom="32dp"
+                    android:visibility="gone">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/lottieEmpty"
+                        android:layout_width="200dp"
+                        android:layout_height="150dp"
+                        app:lottie_rawRes="@raw/empty_state"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true" />
+
+                    <TextView
+                        android:id="@+id/tvEmptyState"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Belum ada data mahasiswa"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/textSecondary"
+                        android:gravity="center"
+                        android:layout_marginTop="12dp" />
+                </LinearLayout>
+
+                <!-- List -->
+                <ListView
+                    android:id="@+id/listViewData"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@null"
+                    android:dividerHeight="8dp"
+                    android:nestedScrollingEnabled="false" />
             </LinearLayout>
-
-
-            <!-- List -->
-            <ListView
-                android:id="@+id/listViewData"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:divider="@null"
-                android:dividerHeight="8dp"
-                android:clipToPadding="false"
-                android:scrollbars="none"
-                android:nestedScrollingEnabled="true" />
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
 
-</LinearLayout>
+    <!-- Scroll to Top FAB -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabScrollTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="24dp"
+        android:src="@drawable/ic_arrow_up"
+        app:tint="@color/white"
+        app:backgroundTint="@color/primary"
+        android:visibility="gone" />
+
+</RelativeLayout>
