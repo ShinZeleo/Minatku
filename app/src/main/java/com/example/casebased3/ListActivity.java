@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -55,6 +56,9 @@ public class ListActivity extends AppCompatActivity {
     private HorizontalBarChart barChart;
     private MaterialCardView cardPieChart;
     private MaterialCardView cardBarChart;
+    private MaterialCardView cardInsightGlobal;
+    private ImageView ivExpandCharts;
+    private LinearLayout containerCharts;
 
     private DataRepository repository;
     private List<DataModel> allData;
@@ -89,6 +93,15 @@ public class ListActivity extends AppCompatActivity {
         barChart = findViewById(R.id.barChart);
         cardPieChart = findViewById(R.id.cardPieChart);
         cardBarChart = findViewById(R.id.cardBarChart);
+        cardInsightGlobal = findViewById(R.id.cardInsightGlobal);
+        ivExpandCharts = findViewById(R.id.ivExpandCharts);
+        containerCharts = findViewById(R.id.containerCharts);
+
+        cardInsightGlobal.setOnClickListener(v -> {
+            boolean isVisible = containerCharts.getVisibility() == View.VISIBLE;
+            containerCharts.setVisibility(isVisible ? View.GONE : View.VISIBLE);
+            ivExpandCharts.animate().rotation(isVisible ? 0 : 180).setDuration(200).start();
+        });
 
         tvEmptyState.setText("Belum ada data mahasiswa");
 
@@ -204,6 +217,7 @@ public class ListActivity extends AppCompatActivity {
             layoutEmptyState.setVisibility(filteredData.isEmpty() ? View.VISIBLE : View.GONE);
             listViewData.setVisibility(filteredData.isEmpty() ? View.GONE : View.VISIBLE);
             tvInsight.setVisibility(View.VISIBLE);
+            cardInsightGlobal.setVisibility(View.VISIBLE);
             tvEmptyState.setText(filteredData.isEmpty() ? "Tidak ada data sesuai filter" : "Belum ada data mahasiswa");
         }
         tvStatistik.setText(InsightAnalyzer.getQuickStats(allData));
